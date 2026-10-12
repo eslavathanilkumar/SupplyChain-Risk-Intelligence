@@ -1,0 +1,187 @@
+SUPPLY CHAIN RISK INTELLIGENCE PLATFORM
+EXPLORATORY DATA ANALYSIS REPORT
+======================================================================
+
+Total rows: 180,519
+Total columns: 53
+Exact duplicate rows: 0
+Total missing cells: 336,209
+
+COLUMN NAMES
+----------------------------------------------------------------------
+Type, Days for shipping (real), Days for shipment (scheduled), Benefit per order, Sales per customer, Delivery Status, Late_delivery_risk, Category Id, Category Name, Customer City, Customer Country, Customer Email, Customer Fname, Customer Id, Customer Lname, Customer Password, Customer Segment, Customer State, Customer Street, Customer Zipcode, Department Id, Department Name, Latitude, Longitude, Market, Order City, Order Country, Order Customer Id, order date (DateOrders), Order Id, Order Item Cardprod Id, Order Item Discount, Order Item Discount Rate, Order Item Id, Order Item Product Price, Order Item Profit Ratio, Order Item Quantity, Sales, Order Item Total, Order Profit Per Order, Order Region, Order State, Order Status, Order Zipcode, Product Card Id, Product Category Id, Product Description, Product Image, Product Name, Product Price, Product Status, shipping date (DateOrders), Shipping Mode
+
+DATA TYPES
+----------------------------------------------------------------------
+Type                                 str
+Days for shipping (real)           int64
+Days for shipment (scheduled)      int64
+Benefit per order                float64
+Sales per customer               float64
+Delivery Status                      str
+Late_delivery_risk                 int64
+Category Id                        int64
+Category Name                        str
+Customer City                        str
+Customer Country                     str
+Customer Email                       str
+Customer Fname                       str
+Customer Id                        int64
+Customer Lname                       str
+Customer Password                    str
+Customer Segment                     str
+Customer State                       str
+Customer Street                      str
+Customer Zipcode                 float64
+Department Id                      int64
+Department Name                      str
+Latitude                         float64
+Longitude                        float64
+Market                               str
+Order City                           str
+Order Country                        str
+Order Customer Id                  int64
+order date (DateOrders)              str
+Order Id                           int64
+Order Item Cardprod Id             int64
+Order Item Discount              float64
+Order Item Discount Rate         float64
+Order Item Id                      int64
+Order Item Product Price         float64
+Order Item Profit Ratio          float64
+Order Item Quantity                int64
+Sales                            float64
+Order Item Total                 float64
+Order Profit Per Order           float64
+Order Region                         str
+Order State                          str
+Order Status                         str
+Order Zipcode                    float64
+Product Card Id                    int64
+Product Category Id                int64
+Product Description              float64
+Product Image                        str
+Product Name                         str
+Product Price                    float64
+Product Status                     int64
+shipping date (DateOrders)           str
+Shipping Mode                        str
+
+NUMERIC SUMMARY
+----------------------------------------------------------------------
+       Days for shipping (real)  Days for shipment (scheduled)  Benefit per order  Sales per customer  Late_delivery_risk    Category Id    Customer Id  Customer Zipcode  Department Id       Latitude      Longitude  Order Customer Id       Order Id  Order Item Cardprod Id  Order Item Discount  Order Item Discount Rate  Order Item Id  Order Item Product Price  Order Item Profit Ratio  Order Item Quantity          Sales  Order Item Total  Order Profit Per Order  Order Zipcode  Product Card Id  Product Category Id  Product Description  Product Price  Product Status
+count             180519.000000                  180519.000000      180519.000000       180519.000000       180519.000000  180519.000000  180519.000000     180516.000000  180519.000000  180519.000000  180519.000000      180519.000000  180519.000000           180519.000000        180519.000000             180519.000000  180519.000000             180519.000000            180519.000000        180519.000000  180519.000000     180519.000000           180519.000000   24840.000000    180519.000000        180519.000000                  0.0  180519.000000        180519.0
+mean                   3.497654                       2.931847          21.974989          183.107609            0.548291      31.851451    6691.379495      35921.126914       5.443460      29.719955     -84.915675        6691.379495   36221.894903              692.509764            20.664741                  0.101668   90260.000000                141.232550                 0.120647             2.127638     203.772096        183.107609               21.974989   55426.132327       692.509764            31.851451                  NaN     141.232550             0.0
+std                    1.623722                       1.374449         104.433526          120.043670            0.497664      15.640064    4162.918106      37542.461122       1.629246       9.813646      21.433241        4162.918106   21045.379569              336.446807            21.800901                  0.070415   52111.490959                139.732492                 0.466796             1.453451     132.273077        120.043670              104.433526   31919.279101       336.446807            15.640064                  NaN     139.732492             0.0
+min                    0.000000                       0.000000       -4274.979980            7.490000            0.000000       2.000000       1.000000        603.000000       2.000000     -33.937553    -158.025986           1.000000       1.000000               19.000000             0.000000                  0.000000       1.000000                  9.990000                -2.750000             1.000000       9.990000          7.490000            -4274.979980    1040.000000        19.000000             2.000000                  NaN       9.990000             0.0
+25%                    2.000000                       2.000000           7.000000          104.379997            0.000000      18.000000    3258.500000        725.000000       4.000000      18.265432     -98.446312        3258.500000   18057.000000              403.000000             5.400000                  0.040000   45130.500000                 50.000000                 0.080000             1.000000     119.980003        104.379997                7.000000   23464.000000       403.000000            18.000000                  NaN      50.000000             0.0
+50%                    3.000000                       4.000000          31.520000          163.990005            1.000000      29.000000    6457.000000      19380.000000       5.000000      33.144863     -76.847908        6457.000000   36140.000000              627.000000            14.000000                  0.100000   90260.000000                 59.990002                 0.270000             1.000000     199.919998        163.990005               31.520000   59405.000000       627.000000            29.000000                  NaN      59.990002             0.0
+75%                    5.000000                       4.000000          64.800003          247.399994            1.000000      45.000000    9779.000000      78207.000000       7.000000      39.279617     -66.370583        9779.000000   54144.000000             1004.000000            29.990000                  0.160000  135389.500000                199.990005                 0.360000             3.000000     299.950012        247.399994               64.800003   90008.000000      1004.000000            45.000000                  NaN     199.990005             0.0
+max                    6.000000                       4.000000         911.799988         1939.989990            1.000000      76.000000   20757.000000      99205.000000      12.000000      48.781933     115.263077       20757.000000   77204.000000             1363.000000           500.000000                  0.250000  180519.000000               1999.989990                 0.500000             5.000000    1999.989990       1939.989990              911.799988   99301.000000      1363.000000            76.000000                  NaN    1999.989990             0.0
+
+MISSING VALUES BY COLUMN
+----------------------------------------------------------------------
+Product Description              180519
+Order Zipcode                    155679
+Customer Lname                        8
+Customer Zipcode                      3
+Days for shipment (scheduled)         0
+Sales per customer                    0
+Benefit per order                     0
+Delivery Status                       0
+Late_delivery_risk                    0
+Customer City                         0
+Customer Country                      0
+Category Id                           0
+Category Name                         0
+Customer Fname                        0
+Customer Email                        0
+Customer Password                     0
+Customer Id                           0
+Customer Segment                      0
+Customer State                        0
+Days for shipping (real)              0
+Type                                  0
+Department Id                         0
+Customer Street                       0
+Department Name                       0
+Latitude                              0
+Order City                            0
+Order Country                         0
+Longitude                             0
+Market                                0
+Order Id                              0
+
+LATE-DELIVERY RISK DISTRIBUTION
+----------------------------------------------------------------------
+Late_delivery_risk
+1    98977
+0    81542
+
+ORDERS BY SHIPPING MODE
+----------------------------------------------------------------------
+Shipping Mode
+Standard Class    107752
+Second Class       35216
+First Class        27814
+Same Day            9737
+
+TOP 10 ORDER REGIONS
+----------------------------------------------------------------------
+Order Region
+Central America    28341
+Western Europe     27109
+South America      14935
+Oceania            10148
+Northern Europe     9792
+Southeast Asia      9539
+Southern Europe     9431
+Caribbean           8318
+West of USA         7993
+South Asia          7731
+
+SHIPPING DELAY ANALYSIS
+----------------------------------------------------------------------
+Orders with shipping-time data: 180,519
+Late shipments: 103,400
+On-time shipments: 33,753
+Early shipments: 43,366
+Average delay in days: 0.566
+Median delay in days: 1.000
+
+SALES SUMMARY
+----------------------------------------------------------------------
+count    180519.000000
+mean        203.772096
+std         132.273077
+min           9.990000
+25%         119.980003
+50%         199.919998
+75%         299.950012
+max        1999.989990
+
+NUMERIC FEATURE CORRELATIONS
+----------------------------------------------------------------------
+                               Days for shipping (real)  Days for shipment (scheduled)  Benefit per order  Sales per customer  Late_delivery_risk  Category Id  Customer Id  Customer Zipcode  Department Id  Latitude  Longitude  Order Customer Id  Order Id  Order Item Cardprod Id  Order Item Discount
+Days for shipping (real)                          1.000                          0.516             -0.005               0.002               0.401       -0.000        0.003             0.000         -0.002    -0.004      0.004              0.003    -0.002                  -0.001                0.002
+Days for shipment (scheduled)                     0.516                          1.000             -0.000               0.006              -0.369       -0.000        0.001            -0.003         -0.000    -0.005      0.004              0.001    -0.002                  -0.000                0.003
+Benefit per order                                -0.005                         -0.000              1.000               0.133              -0.004        0.032        0.009             0.002          0.031     0.000     -0.003              0.009     0.014                   0.033                0.065
+Sales per customer                                0.002                          0.006              0.133               1.000              -0.004        0.225        0.060            -0.001          0.232    -0.000      0.001              0.060     0.079                   0.236                0.499
+Late_delivery_risk                                0.401                         -0.369             -0.004              -0.004               1.000        0.002        0.001             0.003          0.001     0.001     -0.002              0.001    -0.001                   0.001               -0.001
+Category Id                                      -0.000                         -0.000              0.032               0.225               0.002        1.000        0.275             0.003          0.889     0.002     -0.002              0.275     0.198                   0.991                0.140
+Customer Id                                       0.003                          0.001              0.009               0.060               0.001        0.275        1.000             0.002          0.137     0.002     -0.005              1.000     0.205                   0.228                0.038
+Customer Zipcode                                  0.000                         -0.003              0.002              -0.001               0.003        0.003        0.002             1.000          0.003     0.585     -0.924              0.002    -0.001                   0.003               -0.002
+Department Id                                    -0.002                         -0.000              0.031               0.232               0.001        0.889        0.137             0.003          1.000     0.002     -0.002              0.137     0.107                   0.906                0.145
+Latitude                                         -0.004                         -0.005              0.000              -0.000               0.001        0.002        0.002             0.585          0.002     1.000     -0.525              0.002    -0.003                   0.002               -0.003
+Longitude                                         0.004                          0.004             -0.003               0.001              -0.002       -0.002       -0.005            -0.924         -0.002    -0.525      1.000             -0.005     0.003                  -0.003                0.002
+Order Customer Id                                 0.003                          0.001              0.009               0.060               0.001        0.275        1.000             0.002          0.137     0.002     -0.005              1.000     0.205                   0.228                0.038
+Order Id                                         -0.002                         -0.002              0.014               0.079              -0.001        0.198        0.205            -0.001          0.107    -0.003      0.003              0.205     1.000                   0.163                0.049
+Order Item Cardprod Id                           -0.001                         -0.000              0.033               0.236               0.001        0.991        0.228             0.003          0.906     0.002     -0.003              0.228     0.163                   1.000                0.147
+Order Item Discount                               0.002                          0.003              0.065               0.499              -0.001        0.140        0.038            -0.002          0.145    -0.003      0.002              0.038     0.049                   0.147                1.000
+
+NOTES
+----------------------------------------------------------------------
+- These results describe historical records, not guaranteed future outcomes.
+- Correlation does not establish causation.
+- Missing values have not been automatically imputed.
+- Late-delivery risk is a dataset label; verify its meaning before modeling.

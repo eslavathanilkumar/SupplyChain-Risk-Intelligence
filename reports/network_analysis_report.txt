@@ -1,0 +1,60 @@
+COUNTRY TRADE NETWORK ANALYSIS
+========================================
+Year: 2023
+Source: UN Comtrade public preview API
+Interpretation: reported country-level trade flows
+
+Input records: 4,129
+Graph nodes: 242
+Directed edges: 4,129
+Weakly connected components: 1
+
+TOP COUNTRIES BY BETWEENNESS CENTRALITY
+----------------------------------------
+       country  betweenness_centrality
+         China                0.001038
+   Netherlands                0.000592
+         Spain                0.000536
+         Japan                0.000534
+United Kingdom                0.000523
+         Italy                0.000496
+        France                0.000448
+       Germany                0.000419
+        Canada                0.000383
+        Brazil                0.000368
+
+TOP COUNTRIES BY REPORTED OUTGOING TRADE VALUE
+----------------------------------------
+             country  out_strength_trade_value_usd
+               China                  3.379748e+12
+                 USA                  2.018543e+12
+             Germany                  1.711348e+12
+         Netherlands                  7.174401e+11
+               Japan                  7.172192e+11
+               Italy                  6.768198e+11
+              France                  6.604487e+11
+       Rep. of Korea                  6.318042e+11
+              Mexico                  5.959728e+11
+United Arab Emirates                  5.702454e+11
+
+TOP COUNTRIES BY REPORTED INCOMING TRADE VALUE
+----------------------------------------
+             country  in_strength_trade_value_usd
+                 USA                 2.308551e+12
+               China                 1.034761e+12
+             Germany                 6.679264e+11
+          Areas, nes                 6.471072e+11
+              Mexico                 4.985454e+11
+              Canada                 4.885290e+11
+China, Hong Kong SAR                 4.863770e+11
+         Netherlands                 4.809521e+11
+              France                 4.718067e+11
+      United Kingdom                 4.358814e+11
+
+LIMITATIONS
+----------------------------------------
+The graph contains only the records retrieved by the ingestion script.
+Missing countries or edges do not imply zero trade.
+Reported exports may differ from partner-reported imports.
+Trade values do not establish direct supplier relationships.
+Betweenness indicates structural brokerage, not proven disruption impact.

@@ -1,0 +1,38 @@
+SUPPLY CHAIN RISK INTELLIGENCE REPORT
+================================================
+Status: Exploratory; validate data coverage before decisions.
+
+1. Best model by ROC-AUC
+Category: delivery_risk_model
+Severity: information
+Finding: Random Forest achieved ROC-AUC 0.741, F1 score 0.662, and recall 54.6% on the evaluation set.
+Recommendation: Compare recall and precision at different classification thresholds before using predictions to prioritize operational interventions.
+Limitation: These metrics describe the available historical dataset and do not guarantee future performance.
+
+2. Countries with high betweenness centrality
+Category: network_centrality
+Severity: investigate
+Finding: The top five countries by betweenness centrality in the current graph are: China, Netherlands, Spain, Japan, United Kingdom.
+Recommendation: Inspect the trade connections around these countries and test how network connectivity changes when each node is removed.
+Limitation: Betweenness measures structural position, not proven economic impact or disruption probability.
+
+3. Largest outgoing reported trade values
+Category: trade_concentration
+Severity: investigate
+Finding: Countries with the largest summed outgoing trade values in the current graph include: China, USA, Germany, Netherlands, Japan.
+Recommendation: Review the underlying edge list to identify important trade partners and determine whether particular products or regions have concentrated dependencies.
+Limitation: The current graph may be incomplete because some API requests failed. Country-reported exports can also differ from partner-reported imports.
+
+4. Largest incoming reported trade values
+Category: trade_dependency
+Severity: investigate
+Finding: Countries with the largest summed incoming trade values in the current graph include: USA, China, Germany, Areas, nes, Mexico.
+Recommendation: Investigate the partners and product categories behind these flows before drawing conclusions about dependency or substitutability.
+Limitation: Large incoming trade value alone does not establish that a country depends on a particular exporter.
+
+5. Validate trade-data coverage
+Category: data_quality
+Severity: warning
+Finding: The ingestion run reported failed country requests. The network therefore should be treated as a partial view until coverage has been checked.
+Recommendation: Retry failed requests, record which countries were retrieved, and compare coverage before publishing country rankings as findings.
+Limitation: Missing data can distort centrality and trade-value rankings; missing edges must not be treated as zero trade.

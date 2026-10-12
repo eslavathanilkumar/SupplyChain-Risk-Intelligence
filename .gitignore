@@ -1,0 +1,35 @@
+@'
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Datasets
+data/raw/*
+data/processed/*
+data/external/*
+
+# Generated figures and model artifacts
+reports/figures/
+models/*.joblib
+models/*.pkl
+*.joblib
+*.pkl
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+'@ | Set-Content -LiteralPath .gitignore -Encoding utf8

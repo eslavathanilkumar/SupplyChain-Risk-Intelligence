@@ -1,0 +1,50 @@
+{
+  "project": "Supply Chain Risk Intelligence Platform",
+  "status": "exploratory",
+  "sources": [
+    "reports\\ml_model_comparison.csv",
+    "reports\\country_network_metrics.csv"
+  ],
+  "insights": [
+    {
+      "category": "delivery_risk_model",
+      "severity": "information",
+      "title": "Best model by ROC-AUC",
+      "finding": "Random Forest achieved ROC-AUC 0.741, F1 score 0.662, and recall 54.6% on the evaluation set.",
+      "recommendation": "Compare recall and precision at different classification thresholds before using predictions to prioritize operational interventions.",
+      "limitation": "These metrics describe the available historical dataset and do not guarantee future performance."
+    },
+    {
+      "category": "network_centrality",
+      "severity": "investigate",
+      "title": "Countries with high betweenness centrality",
+      "finding": "The top five countries by betweenness centrality in the current graph are: China, Netherlands, Spain, Japan, United Kingdom.",
+      "recommendation": "Inspect the trade connections around these countries and test how network connectivity changes when each node is removed.",
+      "limitation": "Betweenness measures structural position, not proven economic impact or disruption probability."
+    },
+    {
+      "category": "trade_concentration",
+      "severity": "investigate",
+      "title": "Largest outgoing reported trade values",
+      "finding": "Countries with the largest summed outgoing trade values in the current graph include: China, USA, Germany, Netherlands, Japan.",
+      "recommendation": "Review the underlying edge list to identify important trade partners and determine whether particular products or regions have concentrated dependencies.",
+      "limitation": "The current graph may be incomplete because some API requests failed. Country-reported exports can also differ from partner-reported imports."
+    },
+    {
+      "category": "trade_dependency",
+      "severity": "investigate",
+      "title": "Largest incoming reported trade values",
+      "finding": "Countries with the largest summed incoming trade values in the current graph include: USA, China, Germany, Areas, nes, Mexico.",
+      "recommendation": "Investigate the partners and product categories behind these flows before drawing conclusions about dependency or substitutability.",
+      "limitation": "Large incoming trade value alone does not establish that a country depends on a particular exporter."
+    },
+    {
+      "category": "data_quality",
+      "severity": "warning",
+      "title": "Validate trade-data coverage",
+      "finding": "The ingestion run reported failed country requests. The network therefore should be treated as a partial view until coverage has been checked.",
+      "recommendation": "Retry failed requests, record which countries were retrieved, and compare coverage before publishing country rankings as findings.",
+      "limitation": "Missing data can distort centrality and trade-value rankings; missing edges must not be treated as zero trade."
+    }
+  ]
+}

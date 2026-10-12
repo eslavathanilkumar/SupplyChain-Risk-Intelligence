@@ -1,0 +1,43 @@
+SUPPLY CHAIN RISK INTELLIGENCE PLATFORM
+MACHINE LEARNING MODEL COMPARISON
+=================================================================
+
+Dataset: supply_chain_cleaned.csv
+Sample size: 50,000
+Training records: 40,000
+Testing records: 10,000
+Target: Late_delivery_risk
+
+FEATURES USED
+-----------------------------------------------------------------
+- Days for shipment (scheduled)
+- Sales
+- Order Item Quantity
+- Order Item Discount
+- Order Item Discount Rate
+- Order Item Product Price
+- Order Item Profit Ratio
+- Type
+- Shipping Mode
+- Market
+- Order Region
+- Order Country
+- Customer Segment
+- Department Name
+- Category Name
+
+MODEL METRICS
+-----------------------------------------------------------------
+              Model  Accuracy  Precision   Recall  F1 Score  ROC-AUC
+      Random Forest    0.6938   0.840539 0.545554  0.661657 0.741216
+Logistic Regression    0.6910   0.839084 0.540634  0.657580 0.737297
+
+INTERPRETATION NOTES
+-----------------------------------------------------------------
+- Accuracy is the overall fraction classified correctly.
+- Precision measures how many predicted positives were correct.
+- Recall measures how many actual positive cases were found.
+- F1 balances precision and recall.
+- ROC-AUC measures ranking discrimination across thresholds.
+- These metrics describe a held-out test set, not guaranteed future performance.
+- The dataset label may encode historical rules; validate its definition before production use.
